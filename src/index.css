@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.table__header{
+  @apply overflow-x-auto relative flex justify-center sm:rounded-lg;
+}
+.table__title{
+  @apply text-3xl text-center font-semibold
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.table{
+  @apply w-1/2 text-sm text-left text-gray-500  shadow-xl mt-4 ;
 }
+
+.table__thead{
+  @apply text-xs text-gray-700 uppercase bg-gray-50;
+}
+
+.table__thead-th{
+  @apply py-3 px-6
+}
+.table__tbody-td{
+  @apply py-4 px-6
+}
+
